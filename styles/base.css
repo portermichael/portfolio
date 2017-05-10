@@ -1,0 +1,59 @@
+body {
+  line-height: 1.5;
+  font-size: 100%;
+  color: black;
+  max-width: 960px;
+  margin: 0 auto;
+  /*choose text font*/
+}
+
+header {
+  background-color: green;
+}
+
+h1 {
+  display: block;
+  background-color: pink;
+  font-size: 250%;
+  padding: 5em auto 5em auto;
+}
+
+h2 {
+  background-color: gray;
+  font-size: 200%;
+}
+h3 {
+  background-color: purple;
+  font-size: 175%;
+}
+
+main {
+  background-color: pink;
+  width: 400px;
+  float: left;
+  margin: 0 4.16% 0 4.16%;
+
+}
+img {
+  max-width: 100%;
+  background-color: lightblue;
+}
+
+a, a:link, a:active, a:visited {
+  color: orange;
+  background-color: black;
+  text-decoration: none;
+}
+
+a:
+hr {
+  color: blue;
+  max-width: 80%;
+  margin: 1%, 1%, 1%, 1%;
+}
+
+nav li {
+  display: inline;
+  background-color: red;
+  font-size: 125%;
+}
