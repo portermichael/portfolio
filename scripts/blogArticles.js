@@ -3,7 +3,7 @@
 var allArticles = [
   {
     title = "What is it?",
-    githubUrl = "",
+    linkedUrl = "",
     initialDate = "",
     lastEditedDate = "",
     category = "Github",
