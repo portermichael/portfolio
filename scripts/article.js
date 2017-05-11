@@ -21,7 +21,7 @@ Article.prototype.toHtml = function(){
 
 allArticles.forEach(function(articleObj) {
   articles.push(new Article(articleObj));
-};)
+});
 
 articles.forEach(function(article){
   $('#template').append(article.toHtml);
