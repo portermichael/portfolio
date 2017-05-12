@@ -27,8 +27,9 @@
 
   #articles {
     width: 30%;
+    display: block;
     float: left;
-    clear: left;
+    clear: both;
     margin: 1em 5% 1em 5%;
     border-top: solid 1px gray;
     border-bottom: solid 1px gray;
