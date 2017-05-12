@@ -16,31 +16,37 @@ viewArticles.mainNav = function() {
     var dataContent = $(this).data('content')
     if(dataContent === 'home') {
       //show articles and hide about
-      $('#articles').show();
+      $('#articles').fadeIn();
       $('#aboutMe').hide();
-    } else if (dataContent === 'about') {
+    }
+    else if (dataContent === 'about') {
       //show about and hide articles
-      $('#aboutMe').show();
+      $('#aboutMe').fadeIn();
       $('#articles').hide();
-    } else if (dataContent === 'blog') {
+    }
+    //here
+    else if (dataContent === 'blog') {
       //hide all articles
-      $('#articles').hide();
+      $('article').hide();
       $('#aboutMe').hide();
       //show articles with category blog
-      $('#articles').each(function(){
-        if($(this).data('category') === 'blog')
+      $('article').each(function(){
+        if ($(this).data('category') === 'Blog') {
           $(this).show();
+        }
       });
-    } else if (dataContent === 'project') {
+    }
+    else if (dataContent === 'projects') {
     //hide all articles
-      $('#articles').hide();
+      $('article').hide();
       $('#aboutMe').hide();
-    //show articles with category project
-      $('#articles').each(function(){
-        if($(this).data('category') === 'project')
+      //show articles with category github
+      $('article').each(function(){
+        if ($(this).data('category') === 'Github') {
           $(this).show();
-    });
-  }
+        }
+      });
+    }
   });
 };
 
@@ -48,13 +54,13 @@ viewArticles.shortenText = function () {
   $('.article-body *:nth-of-type(n+2)').hide();
   $('#articles').on('click', '.read-more', function(event){
     event.preventDefault();
-    if($(this).html() === 'Read on →') {
+    if($(this).html() === 'Read more →') {
       $(this).prev().children().show();
-      $(this).html('Show less ←');
+      $(this).html('Read less ←');
       $(this).blur();
-    } else if ($(this).html() === 'Show less ←') {
+    } else if ($(this).html() === 'Read less ←') {
       $('.article-body *:nth-of-type(n+2)').hide();
-      $(this).html('Read on →');
+      $(this).html('Read more →');
       $(this).blur();
     }
   });
@@ -62,4 +68,5 @@ viewArticles.shortenText = function () {
 
 $(document).ready(function() {
   viewArticles.mainNav();
+  viewArticles.shortenText();
 });

@@ -12,8 +12,9 @@ function Article (allArticlesObj) {
 }
 
 Article.prototype.toHtml = function() {
-  var $newArticle = $('.template').clone();
+  var $newArticle = $('article.template').clone();
   $newArticle.removeClass('template');
+  $newArticle.attr('data-category', this.category);
   $newArticle.find('h3').html(this.title);
   $newArticle.find('.article-body').html(this.articleContent);
   if (this.linkedUrl !== undefined) {
@@ -23,7 +24,6 @@ Article.prototype.toHtml = function() {
   }
   $newArticle.find('.time p:first-child').html(this.lastEditedDate);
   $newArticle.find('.category').html(this.category);
-  $newArticle.attr('data-content', this.category);
   $newArticle.find('.time p:last-child').html(this.createdDate);
   return $newArticle
 };
