@@ -2,47 +2,36 @@
 
 var viewArticles = [];
 
-//load articles from template
-
-//separate articles based on category
-
-//load about button
-
-//nav button functionality
+//nav buttno functionality
 viewArticles.mainNav = function() {
   $('#aboutMe').hide();
   $('li.tab').on('click', function(event){
     event.preventDefault();
+    //show all articles and hide about
     var dataContent = $(this).data('content')
     if(dataContent === 'home') {
-      //show articles and hide about
       $('#aboutMe').hide();
       $('article').fadeIn();
-
     }
+    //show about and hide all articles
     else if (dataContent === 'about') {
-      //show about and hide articles
       $('article').hide();
       $('#aboutMe').fadeIn();
-
     }
-    //here
+    //hide all articles and about and show only those with category blog
     else if (dataContent === 'blog') {
-      //hide all articles
       $('article').hide();
       $('#aboutMe').hide();
-      //show articles with category blog
       $('article').each(function(){
         if ($(this).data('category') === 'Blog') {
           $(this).fadeIn();
         }
       });
     }
+    //hide all articles and about and show only those with category blog
     else if (dataContent === 'projects') {
-    //hide all articles
       $('article').hide();
       $('#aboutMe').hide();
-      //show articles with category github
       $('article').each(function(){
         if ($(this).data('category') === 'Github') {
           $(this).fadeIn();
@@ -68,7 +57,13 @@ viewArticles.shortenText = function () {
   });
 };
 
+viewArticles.hamburgerTab = function () {
+  $('.fa-bars').on('click', function(){
+    $('li').toggleClass('fabtab');
+  });
+}
 $(document).ready(function() {
   viewArticles.mainNav();
   viewArticles.shortenText();
+  viewArticles.hamburgerTab();
 });
