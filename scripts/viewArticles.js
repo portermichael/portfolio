@@ -11,18 +11,20 @@ var viewArticles = [];
 //nav button functionality
 viewArticles.mainNav = function() {
   $('#aboutMe').hide();
-  $('li.tab').on('click', function(){
+  $('li.tab').on('click', function(event){
     event.preventDefault();
     var dataContent = $(this).data('content')
     if(dataContent === 'home') {
       //show articles and hide about
-      $('#articles').fadeIn();
       $('#aboutMe').hide();
+      $('article').fadeIn();
+
     }
     else if (dataContent === 'about') {
       //show about and hide articles
+      $('article').hide();
       $('#aboutMe').fadeIn();
-      $('#articles').hide();
+
     }
     //here
     else if (dataContent === 'blog') {
@@ -32,7 +34,7 @@ viewArticles.mainNav = function() {
       //show articles with category blog
       $('article').each(function(){
         if ($(this).data('category') === 'Blog') {
-          $(this).show();
+          $(this).fadeIn();
         }
       });
     }
@@ -43,7 +45,7 @@ viewArticles.mainNav = function() {
       //show articles with category github
       $('article').each(function(){
         if ($(this).data('category') === 'Github') {
-          $(this).show();
+          $(this).fadeIn();
         }
       });
     }

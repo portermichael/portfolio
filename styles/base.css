@@ -32,8 +32,6 @@ h3 {
 }
 
 main {
-  width: 100%;
-  background-color: blue;
 }
 
 img {
@@ -64,10 +62,6 @@ li {
 
   body {
     max-width: 960px;
-  }
-
-  main {
-    margin: 0 5% 0 5%;
   }
 
   li {

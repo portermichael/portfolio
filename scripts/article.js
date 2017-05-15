@@ -15,7 +15,7 @@ Article.prototype.toHtml = function() {
   var articleTemplate = $('#articleTemplate').html();
   var compileArticle = Handlebars.compile(articleTemplate);
 
-  this.daysAgo = parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000);
+  this.daysAgo = parseInt(Math.floor((new Date() - new Date(this.createdDate))/60/60/24/1000));
   this.publishStatus = this.createdDate ? `published ${this.daysAgo} days ago` : '(draft)';
 
   return compileArticle(this);
