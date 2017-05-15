@@ -2,7 +2,7 @@
 
 var viewArticles = [];
 
-//nav buttno functionality
+//nav button functionality
 viewArticles.mainNav = function() {
   $('#aboutMe').hide();
   $('li.tab').on('click', function(event){
@@ -57,11 +57,13 @@ viewArticles.shortenText = function () {
   });
 };
 
+//hamburger functionality
 viewArticles.hamburgerTab = function () {
   $('.fa-bars').on('click', function(){
     $('li').toggleClass('fabtab');
   });
 }
+
 $(document).ready(function() {
   viewArticles.mainNav();
   viewArticles.shortenText();

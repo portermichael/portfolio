@@ -1,10 +1,4 @@
 
-article {
-  margin: 1em 5% 1em 5%;
-  border-top: solid 1px gray;
-  border-bottom: solid 1px gray;
-}
-
 .template {
   margin: 1em 5% 1em 5%;
   padding: 0.5em 0 0.5em 0;
@@ -23,14 +17,12 @@ article {
   float: right;
   margin: 0.25em 5% 0 0;
 }
+
 .fabtab {
   display: inline-block;
 }
+
 @media screen and (min-width: 600px){
-
-  .template {
-
-  }
 
   .fa-bars {
     display: none;

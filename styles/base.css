@@ -13,7 +13,7 @@ header {
 
 h1 {
   display: block;
-  font-size: 250%;
+  font-size: 2.827em;
   padding: 5em auto 5em auto;
   font-weight: bold;
 }
@@ -23,17 +23,21 @@ header h1, h2{
 }
 
 h2 {
-  font-size: 200%;
+  font-size: 1.999em;
 }
 
 h3 {
-  font-size: 175%;
+  font-size: 1.414em;
   border-bottom: solid 1px #990099;
 }
 
-main {
+h4 {
+  font-size: 1em;
 }
 
+h5{
+  font-size: 0.707em;
+}
 img {
   max-width: 100%;
 }
@@ -47,7 +51,7 @@ nav ul{
   font-size: 156.25%;
   margin: 0 auto;
   text-align: center;
-  padding: 1em 5% 0 5%;
+  padding: 1em 5% 0.75em 5%;
   max-width: 100%;
 }
 
@@ -56,6 +60,12 @@ li {
   width: 30%;
   padding: 0.5em 0 0.5em 0;
   margin: auto 0 auto 0;
+}
+
+article {
+  margin: 1.25em 5% 1em 5%;
+  border-top: solid 1px gray;
+  border-bottom: solid 1px gray;
 }
 
 @media screen and (min-width: 600px){
@@ -67,4 +77,4 @@ li {
   li {
     display: inline-block;
   }
-};
+}
