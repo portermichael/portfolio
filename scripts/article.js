@@ -12,19 +12,13 @@ function Article (allArticlesObj) {
 }
 
 Article.prototype.toHtml = function() {
-  var $newArticle = $('article.template').clone();
-  $newArticle.removeClass('template');
-  $newArticle.find('h3').html(this.title);
-  $newArticle.find('.article-body').html(this.articleContent);
-  if (this.linkedUrl !== undefined) {
-    $newArticle.find('.category').attr('href', this.linkedUrl);
-  } else if (this.linkedUrl === undefined ){
-    $newArticle.find('.category').removeAttr('href');
-  }
-  $newArticle.find('.time p:first-child').html(this.lastEditedDate);
-  $newArticle.find('.category').html(this.category);
-  $newArticle.find('.time p:last-child').html(this.createdDate);
-  return $newArticle
+  var articleTemplate = $('#articleTemplate').html();
+  var compileArticle = Handlebars.compile(articleTemplate);
+
+  this.daysAgo = parseInt(Math.floor((new Date() - new Date(this.createdDate))/60/60/24/1000));
+  this.publishStatus = this.createdDate ? `published ${this.daysAgo} days ago` : '(draft)';
+
+  return compileArticle(this);
 };
 
 allArticles.sort(function(a, b){
