@@ -38,6 +38,7 @@ h4 {
 h5{
   font-size: 0.707em;
 }
+
 img {
   max-width: 100%;
 }
@@ -63,15 +64,26 @@ li {
 }
 
 article {
-  margin: 1.25em 5% 1em 5%;
+  margin: 1.25em 1.5em 1em 1.5em;
   border-top: solid 1px gray;
   border-bottom: solid 1px gray;
+
 }
 
 @media screen and (min-width: 600px){
 
   body {
     max-width: 960px;
+  }
+  #articles {
+    width: 100%;
+    text-align: center;
+  }
+  article {
+    text-align: left;
+    display: inline-block;
+    vertical-align: top;
+    width: calc(32% - 3em);
   }
 
   li {
