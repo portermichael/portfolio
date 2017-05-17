@@ -1,6 +1,6 @@
 'use strict'
 
-var viewArticles = [];
+const viewArticles = [];
 
 //nav button functionality
 viewArticles.mainNav = function() {
@@ -8,7 +8,7 @@ viewArticles.mainNav = function() {
   $('li.tab').on('click', function(event){
     event.preventDefault();
     //show all articles and hide about
-    var dataContent = $(this).data('content')
+    let dataContent = $(this).data('content')
     if(dataContent === 'home') {
       $('#aboutMe').hide();
       $('article').fadeIn();
@@ -64,8 +64,11 @@ viewArticles.hamburgerTab = function () {
   });
 }
 
-$(document).ready(function() {
+viewArticles.initIndexPage = function(){
+  Article.articles.forEach(function(article){
+    $('#articles').append(article.toHtml());
+  });
   viewArticles.mainNav();
   viewArticles.shortenText();
   viewArticles.hamburgerTab();
-});
+}

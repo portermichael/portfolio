@@ -27,36 +27,32 @@ Article.loadAll = function(allArticles){
   });
 
   allArticles.forEach(function(articleObj) {
-    articles.push(new Article(articleObj));
+    Article.articles.push(new Article(articleObj));
   });
 };
 
-Article.fetchAll = function() {
-  $.ajax(
+Article.getAllOfThem = function() {
+  $.ajax({
     url: '/data/blogArticles.json',
     method: 'HEAD',
+    error: function() {
+      console.log('An error has occurred.');
+    },
     success: function(data, message, xhr) {
-      eTag = xhr.getResponseHeader('ETag');
+      let eTag = xhr.getResponseHeader('ETag');
       if (localStorage.eTag === eTag){
-        Article.loadAll(JSON.parse(localStorage.allArticles))
-        //load tohtml?
+        Article.loadAll(JSON.parse(localStorage.allArticlesObj))
+        viewArticles.initIndexPage();
       } else {
-        $.getJSON('data/blogArticles.json').then(function(){
-          localStorage.allArticles = JSON.stringify(data);
+        $.getJSON('data/blogArticles.json').then(function(data){
+          localStorage.allArticlesObj = JSON.stringify(data);
           localStorage.eTag = eTag;
           Article.loadAll(data);
-          //load tohtml?
+          viewArticles.initIndexPage();
         }, function(err) {
           console.error(err);
-        });
-      }
-    };
-    error: function(){
-      console.log('An error has occurred.')
-    }
+        })
+      };
+    }},
   )
-}
-
-Article.articles.forEach(function(article){
-  $('#articles').append(article.toHtml());
-});
+};
