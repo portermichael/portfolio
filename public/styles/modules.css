@@ -1,0 +1,25 @@
+
+
+.category, .time, .article-body{
+  padding: 0.5em 0 0.5em 0;
+}
+
+.time {
+  color: gray;
+}
+
+.fa-bars {
+  float: right;
+  margin: 0.25em 5% 0 0;
+}
+
+.fabtab {
+  display: inline-block;
+}
+
+@media screen and (min-width: 600px){
+
+  .fa-bars {
+    display: none;
+  }
+};

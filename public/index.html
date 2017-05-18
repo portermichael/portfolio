@@ -1,0 +1,57 @@
+<DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="styles/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/layout.css">
+  <link rel="stylesheet" href="styles/modules.css">
+  <script id="articleTemplate" type="text/x-handlebars-template">
+    <article class="template" data-category="{{category}}">
+      <h3>{{title}}</h3>
+      <a class="category" href="{{linkedUrl}}" target="_blank">{{category}}</a>
+      <div class="time">
+        <p>{{lastEditedDate}}</p>
+        <p>{{createdDate}} : {{publishStatus}}</p>
+      </div>
+      <section class="article-body">{{{articleContent}}}</section>
+      <a href="#" class="read-more">Read more →</a>
+    </article>
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Michael Porter</h1>
+    <h2>Portfolio<i class="fa fa-bars fa-lg"></i></h2>
+    <nav>
+      <ul>
+        <li class="tab" data-content="home"><a href="#"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+        <li class="tab" data-content="blog"><a href="#"><i class="fa fa-pencil" aria-hidden="true"></i> Blog</a></li>
+        <li class="tab" data-content="projects"><a href="#"><i class="fa fa-area-chart" aria-hidden="true"></i> Projects</a></li>
+        <li><a href="https://github.com/portermichael" target="_blank"><i class="fa fa-github" aria-hidden="true"></i> Github</a></li>
+        <li><a href="https://twitter.com/@mikeporterr" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a></li>
+        <li class="tab" data-content="about"><a href="#"><i class="fa fa-binoculars" aria-hidden="true"></i> About</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div id="articles">
+    </div>
+    <section id="aboutMe">
+        <h1>Hi, Welcome to about me!</h1>
+        <p>My name is Michael Porter. I went to undergrad at UCLA and majored in Molecular Biology. (MCDB for you bio alumni). I started learning to code in graduate school at UCSD. I began with some introductory online courses and powering through tutorials. I've assembled a handful of sites, read hundreds of blog articles and designed some games during this time. I moved to Seattle and wanted to continue coding as means to create a business. I wasn't sure how my skills fit in, and I have hardly coded with anyone else - which is a load of problems in itself - so I wanted to try codefellows, where I could gain an understanding of both!</p>
+    </section>
+  </main>
+  <footer>
+  </footer>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.8/handlebars.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="scripts/article.js"></script>
+  <script type="text/javascript" src="scripts/viewArticles.js"></script>
+  <script> Article.getAllOfThem(); </script>
+</body>
+</html>
