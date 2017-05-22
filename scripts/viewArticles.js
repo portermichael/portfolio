@@ -46,11 +46,12 @@ viewArticles.shortenText = function () {
   $('#articles').on('click', '.read-more', function(event){
     event.preventDefault();
     if($(this).html() === 'Read more →') {
-      $(this).prev().children().slideDown(1250, 'easeOutBounce');
+      $(this).prev().attr('width', '100%');
+      // $(this).prev().children().slideDown(1250, 'easeOutBounce');
       $(this).html('Read less ←');
       $(this).blur();
     } else if ($(this).html() === 'Read less ←') {
-      $('.article-body *:nth-of-type(n+2)').slideUp();
+      // $('.article-body *:nth-of-type(n+2)').slideUp();
       $(this).html('Read more →');
       $(this).blur();
     }
