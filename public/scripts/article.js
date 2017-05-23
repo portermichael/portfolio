@@ -1,5 +1,7 @@
 'use strict';
+var app = app || {};
 
+(function(module) {
 Article.articles = [];
 
 function Article (allArticlesObj) {
@@ -17,8 +19,15 @@ Article.prototype.toHtml = function() {
 
   this.daysAgo = parseInt(Math.floor((new Date() - new Date(this.createdDate))/60/60/24/1000));
   this.publishStatus = this.createdDate ? `published ${this.daysAgo} days ago` : '(draft)';
+  this.eCount = this.articleContent.match(/e/gi).length;
 
   return compileArticle(this);
+};
+
+Article.eCount = function() {
+  return Article.articles.map(function(article){
+    return article.articleContent.match(/e/gi).length;
+  }).reduce(function(a,b){return a+b});
 };
 
 Article.loadAll = function(allArticles){
@@ -26,7 +35,7 @@ Article.loadAll = function(allArticles){
     return (new Date(b.lastEditedDate) - new Date (a.lastEditedDate));
   });
 
-  allArticles.forEach(function(articleObj) {
+  allArticles.map(function(articleObj) {
     Article.articles.push(new Article(articleObj));
   });
 };
@@ -42,13 +51,13 @@ Article.getAllOfThem = function() {
       let eTag = xhr.getResponseHeader('ETag');
       if (localStorage.eTag === eTag){
         Article.loadAll(JSON.parse(localStorage.allArticlesObj))
-        viewArticles.initIndexPage();
+        app.viewArticles.initIndexPage();
       } else {
         $.getJSON('data/blogArticles.json').then(function(data){
           localStorage.allArticlesObj = JSON.stringify(data);
           localStorage.eTag = eTag;
           Article.loadAll(data);
-          viewArticles.initIndexPage();
+          app.viewArticles.initIndexPage();
         }, function(err) {
           console.error(err);
         })
@@ -56,3 +65,6 @@ Article.getAllOfThem = function() {
     }},
   )
 };
+
+module.Article = Article;
+})(app);

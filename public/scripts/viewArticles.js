@@ -1,4 +1,7 @@
 'use strict'
+var app = app || {};
+
+(function(module) {
 
 const viewArticles = [];
 
@@ -22,7 +25,7 @@ viewArticles.mainNav = function() {
     else if (dataContent === 'blog') {
       $('article').hide();
       $('#aboutMe').hide();
-      $('article').each(function(){
+      $('article').map(function(){
         if ($(this).data('category') === 'Blog') {
           $(this).fadeIn();
         }
@@ -32,7 +35,7 @@ viewArticles.mainNav = function() {
     else if (dataContent === 'projects') {
       $('article').hide();
       $('#aboutMe').hide();
-      $('article').each(function(){
+      $('article').map(function(){
         if ($(this).data('category') === 'Github') {
           $(this).fadeIn();
         }
@@ -67,10 +70,15 @@ viewArticles.hamburgerTab = function () {
 }
 
 viewArticles.initIndexPage = function(){
-  Article.articles.forEach(function(article){
+  app.Article.articles.map(function(article){
     $('#articles').append(article.toHtml());
   });
   viewArticles.mainNav();
   viewArticles.shortenText();
   viewArticles.hamburgerTab();
+
+  $('h2').text(app.Article.eCount() + ' e\'s used total');
+  console.log(app.Article.eCount());
 }
+module.viewArticles = viewArticles;
+})(app);
