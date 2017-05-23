@@ -17,6 +17,11 @@
   display: inline-block;
 }
 
+.bart {
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  width: 95%;
+}
 @media screen and (min-width: 600px){
 
   .fa-bars {

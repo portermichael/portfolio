@@ -70,6 +70,8 @@ article {
 
 }
 
+
+
 @media screen and (min-width: 600px){
 
   body {
@@ -79,12 +81,15 @@ article {
     width: 100%;
     text-align: center;
   }
+
   article {
     text-align: left;
     display: inline-block;
     vertical-align: top;
     width: calc(32% - 3em);
   }
+
+
 
   li {
     display: inline-block;
