@@ -38,9 +38,9 @@
     </nav>
   </header>
   <main>
-    <div id="articles">
+    <div id="articles" class="content">
     </div>
-    <section id="aboutMe">
+    <section id="aboutMe" class="content">
         <h1>Hi, Welcome to about me!</h1>
         <p>My name is Michael Porter. I went to undergrad at UCLA and majored in Molecular Biology. (MCDB for you bio alumni). I started learning to code in graduate school at UCSD. I began with some introductory online courses and powering through tutorials. I've assembled a handful of sites, read hundreds of blog articles and designed some games during this time. I moved to Seattle and wanted to continue coding as means to create a business. I wasn't sure how my skills fit in, and I have hardly coded with anyone else - which is a load of problems in itself - so I wanted to try codefellows, where I could gain an understanding of both!</p>
     </section>
@@ -52,8 +52,10 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.8/handlebars.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-  <script type="text/javascript" src="scripts/article.js"></script>
-  <script type="text/javascript" src="scripts/viewArticles.js"></script>
-  <script> app.Article.getAllOfThem(); </script>
+  <script type="text/javascript" src="scripts/models/article.js"></script>
+  <script type="text/javascript" src="scripts/views/viewArticles.js"></script>
+  <script type="text/javascript" src="scripts/controllers/aboutController.js"></script>
+  <script type="text/javascript" src="scripts/controllers/articleController.js"></script>
+  <script type="text/javascript" src="scripts/controllers/routes.js.js"></script>
 </body>
 </html>

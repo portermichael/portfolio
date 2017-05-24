@@ -4,6 +4,7 @@ var app = app || {};
 (function(module) {
 Article.articles = [];
 
+//object constructor
 function Article (allArticlesObj) {
   this.title = allArticlesObj.title
   this.linkedUrl = allArticlesObj.linkedUrl
