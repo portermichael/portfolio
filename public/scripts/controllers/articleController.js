@@ -6,7 +6,6 @@ var app = app || {};
   const articleController = {};
 
   articleController.handleArticleNav = function() {
-    app.Article.getAllOfThem();
     $('article').hide();
     $('#aboutMe').hide();
     $('article').fadeIn();

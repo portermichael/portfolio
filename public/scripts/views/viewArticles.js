@@ -4,7 +4,6 @@ var app = app || {};
 (function(module) {
 const viewArticles = [];
 
-
 viewArticles.shortenText = function () {
   $('.article-body *:nth-of-type(n+2)').hide();
   $('#articles').on('click', '.read-more', function(event){

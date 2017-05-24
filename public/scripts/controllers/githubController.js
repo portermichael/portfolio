@@ -9,8 +9,8 @@ var app = app || {};
     $('article').hide();
     $('#aboutMe').hide();
     $('article').map(function(){
-      if ($(this).data('category') === 'Github') {
-        $(this).fadeIn();
+    if ($(this).data('category') === 'Github') {
+      $(this).fadeIn();
       }
     });
   };
