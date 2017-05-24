@@ -11,17 +11,7 @@ viewArticles.mainNav = function() {
     event.preventDefault();
     //show all articles and hide about
     let dataContent = $(this).data('content')
-    if(dataContent === 'home') {
-      $('#aboutMe').hide();
-      $('article').fadeIn();
-    }
-    //show about and hide all articles
-    else if (dataContent === 'about') {
-      $('article').hide();
-      $('#aboutMe').fadeIn();
-    }
-    //hide all articles and about and show only those with category blog
-    else if (dataContent === 'blog') {
+    if (dataContent === 'blog') {
       $('article').hide();
       $('#aboutMe').hide();
       $('article').map(function(){

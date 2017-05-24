@@ -6,8 +6,9 @@ var app = app || {};
   const aboutController = {};
 
   aboutController.handleAboutNav = function() {
-    $('.content').hide();
-    $(`#about`).fadeIn();
+    $('article').hide();
+    $('#aboutMe').hide();
+    $('#aboutMe').fadeIn();
   };
 
   module.aboutController = aboutController;

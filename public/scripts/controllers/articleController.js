@@ -7,8 +7,9 @@ var app = app || {};
 
   articleController.handleArticleNav = function() {
     app.Article.getAllOfThem();
-    $('.content').hide();
-    $(`#articles`).fadeIn();
+    $('article').hide();
+    $('#aboutMe').hide();
+    $('article').fadeIn();
 };
 
   module.articleController = articleController;
