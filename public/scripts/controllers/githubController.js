@@ -22,7 +22,7 @@ var app = app || {};
       url: 'https://api.github.com/user/repos',
       method: 'GET',
       headers: {
-        Authorization: "token ${myGithubToken}"
+        Authorization: `token ${myGithubToken}`
       }
     })
     .then(function(data) {

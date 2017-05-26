@@ -36,7 +36,7 @@ viewArticles.initIndexPage = function(){
   viewArticles.shortenText();
   viewArticles.hamburgerTab();
 
-  $('h2').text(app.Article.eCount() + ' e\'s used total');
+  $('h2').after(`<p> ${app.Article.eCount()} e\'s used total </p>`);
   console.log(app.Article.eCount());
 }
 module.viewArticles = viewArticles;
