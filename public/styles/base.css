@@ -36,7 +36,7 @@ h5{
   font-size: 0.707em;
 }
 
-header h1, h2, h3{
+header h1, h2,header h3{
   padding: 1em 0 0 15%;
   border-bottom: none;
 }
@@ -90,8 +90,6 @@ article {
     vertical-align: top;
     width: calc(32% - 3em);
   }
-
-
 
   li {
     display: inline-block;
