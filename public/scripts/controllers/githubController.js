@@ -1,16 +1,16 @@
-'use strict'
+'use strict';
 
 var app = app || {};
 
-(function(module) {
+(function (module) {
   const githubController = {};
 
-  githubController.handleGithubNav = function() {
+  githubController.handleGithubNav = function () {
     $('article').hide();
     $('#aboutMe').hide();
-    $('article').map(function(){
-    if ($(this).data('category') === 'Github') {
-      $(this).fadeIn();
+    $('article').map(function () {
+      if ($(this).data('category') === 'Github') {
+        $(this).fadeIn();
       }
     });
   };
