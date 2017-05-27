@@ -36,8 +36,10 @@ var app = app || {};
     viewArticles.shortenText();
     viewArticles.hamburgerTab();
 
+
     $('h2').after(`<h3>${app.Article.eCount()} e's used total</h3>`);
     console.log(app.Article.eCount());
   }
   module.viewArticles = viewArticles;
+
 })(app);

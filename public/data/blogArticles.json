@@ -32,11 +32,20 @@
     "articleContent": "<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p><p> If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.<p> It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc."
   },
   {
-    "title": "Lorem ipsum",
+    "title": "Why Create a Technical Blog",
     "linkedUrl": "",
-    "createdDate": "2015-10-05",
-    "lastEditedDate": "2015-11-01",
+    "createdDate": "2016-23-05",
+    "lastEditedDate": "2016-19-07",
     "category": "Blog",
-    "articleContent": "orem ipsum dolor sit amet, consectetur adipiscing elit. </p><p> Etiam suscipit magna ac enim viverra, sit amet congue nulla lacinia.<p> Suspendisse iaculis massa elit, eu facilisis quam malesuada et. Aliquam posuere laoreet nulla, ac dictum ex cursus ut. Nullam ut dolor sit amet libero pellentesque pellentesque et eu nunc. Vivamus vitae finibus massa, quis volutpat nunc. Vivamus aliquet ut arcu sed rhoncus. Aliquam dictum id ligula non accumsan. Donec sed sem eget velit suscipit viverra non quis dolor. Proin eu posuere magna. Nam ut diam eros."
+    "language": "Ruby",
+    "articleContent": "<p>When I first started developing I did not see the point in a blog. But, when I started learning beyond the basics and troubleshooting through google, or checking out alternative techniques, I often ran into blogs for potential solutions and thought pieces. Most of the time, I was not receiving an expansive guide, or a lot of code, but they were almost always a great starting point.  A technical blog I often ran into in my early days was joshsoftware.com</p>
+    <p>Even after running into technical blogs I figured these were just folks with years of experience; a blog is for someone in their fifth year programming who wants to give back to the community. Why should I extend the extra effort while I am still learning? Could I even put out anything decent? There are already posts on polymorphic associates and guides, why would it be helpful if I wrote one?</p>
+    <h4>Professional Uses</h4>
+    <p>When I started exploring software positions, I began seeing preferences towards individuals with personal websites and blogs. Obviously an employer wants overachievers. Software posts often call for folks who enjoy programming in their offtime. We should maintain a good work life balance, but a great employee is involved in their work and does thinks about their field in their time off.</p>
+    <p>A blog can also be a....</p>
+    <h4>Good Skills Measuring Stick</h4>
+    <p>A technical blog demonstrates a certain level of technical competence. If we start early enough and consistently a techincal blog can be an accurate measuring stick of skills. A sort of checkbox of abilities.</p>
+    <p>It is true what they say. You do not really understand something unless you can explain it to someone else. So get out there and write posts on the concepts you already know, or even write out the concepts you do not know to find your faults. Worst case scenario, if you want to review something, you can fall back on your own personal body of work and see it again in your own words.</p>
+    <p>Everyone with a technical blog is just like you and me. They took the intiative at some point, and their skills grew with them to the extent that now we can all use their posts and a resource for our own growth.</p>"
   }
 ]
