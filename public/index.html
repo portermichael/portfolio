@@ -22,15 +22,17 @@
     </article>
   </script>
   <script id="githubTemplate" type="text/x-handlebars-template">
-    <h3>{{name}}</h3>
-    <a class="category" href="{{url}}" target="_blank">{{language}}</a>
-    <div class="time">
-      <p>{{created_at}}</p>
-      <p>{{updated_at}}</p>
-    </div>
-    <section class="article-body">
-      <p>{{description}}</p>
-    </section>
+    <article class="template" data-category="Github">
+      <h3>{{name}}</h3>
+      <a class="category" href="{{html_url}}" target="_blank">{{language}}</a>
+      <div class="time">
+        <p>{{created_at}}</p>
+        <p>{{updated_at}}</p>
+      </div>
+      <section class="article-body">
+        <p>{{description}}</p>
+      </section>
+    </article>
   </script>
 </head>
 <body>
@@ -43,7 +45,7 @@
         <li data-content="home"><a href="/"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
         <li data-content="blog"><a href="/blog"><i class="fa fa-pencil" aria-hidden="true"></i> Blog</a></li>
         <li data-content="projects"><a href="/github"><i class="fa fa-area-chart" aria-hidden="true"></i> Projects</a></li>
-        <li><a href="https://github.com/portermichael" target="_blank"><i class="fa fa-github" aria-hidden="true"></i> Github</a></li>
+        <li><a href="https://www.linkedin.com/in/michael-porter-j/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i> LinkedIn</a></li>
         <li><a href="https://twitter.com/@mikeporterr" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a></li>
         <li data-content="about"><a href="/about"><i class="fa fa-binoculars" aria-hidden="true"></i> About</a></li>
       </ul>
@@ -69,8 +71,12 @@
   <script type="text/javascript" src="scripts/controllers/blogController.js"></script>
   <script type="text/javascript" src="scripts/controllers/githubController.js"></script>
   <script type="text/javascript" src="scripts/models/article.js"></script>
+  <script type="text/javascript" src="scripts/models/repo.js"></script>
   <script type="text/javascript" src="scripts/views/viewArticles.js"></script>
+  <script type="text/javascript" src="scripts/views/viewRepos.js"></script>
+  <script type="text/javascript" src="scripts/models/githubToken.js"></script>
   <script type="text/javascript" src="scripts/controllers/routes.js"></script>
   <script>app.Article.getAllOfThem()</script>
+  <script>app.repo.repos()</script>
 </body>
 </html>

@@ -4,16 +4,10 @@ var app = app || {};
 (function (module) {
   const viewRepos = [];
 
-  viewRepos.prototype.toHtml = function () {
+  viewRepos.initRepos = function () {
     let render = Handlebars.compile($('#githubTemplate').html());
-    return render(this);
-  }
-
-  viewRepos.initIndexPage = function () {
-    app.githubController.all.map(function (githubArticle) {
-      ('#articles').append(githubArticle.toHtml());
-    });
-  }
+    $('#articles').append(app.repo.all.map(render));
+  };
 
   module.viewRepos = viewRepos;
 })(app);
