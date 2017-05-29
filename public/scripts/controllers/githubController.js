@@ -22,12 +22,12 @@ var app = app || {};
       url: 'https://api.github.com/user/repos',
       method: 'GET',
       headers: {
-        Authorization: `token ${myGithubToken}`
+        Authorization: 'token e9dfa7c179292320e3098ba7331359e905491c10'
       }
     })
     .then(function (data) {
       githubController.all = data;
-      callback();
+      app.viewRepos.initIndexPage();
     });
   };
 
