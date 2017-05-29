@@ -5,11 +5,9 @@ var app = app || {};
 (function (module) {
   const githubController = {};
 
-
   githubController.all = [];
 
   githubController.handleGithubNav = function () {
-
     $('article').hide();
     $('#aboutMe').hide();
     $('article').map(function () {
@@ -27,12 +25,11 @@ var app = app || {};
         Authorization: `token ${myGithubToken}`
       }
     })
-    .then(function(data) {
+    .then(function (data) {
       githubController.all = data;
       callback();
-    })
-
-  }
+    });
+  };
 
   module.githubController = githubController;
 })(app);
