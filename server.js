@@ -18,7 +18,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('./public'));
 
-app.listen(PORT, function() {
+app.listen(PORT, function () {
   console.log(`You are running on PORT ${PORT}`)
 });
 
