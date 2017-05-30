@@ -10,8 +10,8 @@ const requestProxy = require('express-request-proxy');
 const PORT = process.env.PORT || 3000;
 const app = express();
 
-const conString = postgres:passwordhere@localhost:5432/kilovolt;
-const client = new pg.Client(process.env.DATABASE_URL);
+const conString = 'postgres://postgres:passwordhere@localhost:5432/kilovolt';
+const client = new pg.Client(process.env.DATABASE_URL || conString);
 client.connect();
 client.on('error', err => console.error(err));
 app.use(bodyParser.json());
