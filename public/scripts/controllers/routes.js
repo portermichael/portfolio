@@ -1,5 +1,4 @@
-'use strict';
-
+'use strict'
 var app = app || {};
 
 page('/', app.articleController.handleArticleNav);
