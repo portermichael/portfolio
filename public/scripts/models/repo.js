@@ -9,8 +9,11 @@ var app = app || {};
 
   repo.repos = function () {
     $.ajax({
-      url: '/github/user/repos',
+      url: 'https://api.github.com/user/repos',
       method: 'GET',
+      headers: {
+        Authorization: `token ${myGithubToken}`
+      }
     })
     .then(function (data) {
       repo.all = data;
