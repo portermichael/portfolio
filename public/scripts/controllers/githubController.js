@@ -17,5 +17,20 @@ var app = app || {};
     });
   };
 
+  githubController.repos = function () {
+    $.ajax({
+      url: 'https://api.github.com/user/repos',
+      method: 'GET',
+      headers: {
+        Authorization: `token ${myGithubToken}`
+      }
+    })
+    .then(function(data) {
+      githubController.all = data;
+      callback();
+    })
+
+  }
+
   module.githubController = githubController;
 })(app);
