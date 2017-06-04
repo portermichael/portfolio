@@ -8,8 +8,7 @@ body {
 }
 
 header {
-  background-color: #ffffe6;
-  border: solid 1px #990099;
+  background-color: #009933;
 }
 
 h1 {
@@ -34,7 +33,7 @@ h3 {
 }
 
 h4 {
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
 h5{

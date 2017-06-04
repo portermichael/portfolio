@@ -1,16 +1,16 @@
-'use strict';
+'use strict'
 
 var app = app || {};
 
-(function (module) {
+(function(module) {
   const blogController = {};
 
-  blogController.handleBlogNav = function () {
+  blogController.handleBlogNav = function() {
     $('article').hide();
     $('#aboutMe').hide();
-    $('article').map(function () {
-      if ($(this).data('category') === 'Blog') {
-        $(this).fadeIn();
+    $('article').map(function(){
+    if ($(this).data('category') === 'Blog') {
+      $(this).fadeIn();
       }
     });
   };

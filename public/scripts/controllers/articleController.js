@@ -1,15 +1,15 @@
-'use strict';
+'use strict'
 
 var app = app || {};
 
-(function (module) {
+(function(module) {
   const articleController = {};
 
-  articleController.handleArticleNav = function () {
+  articleController.handleArticleNav = function() {
     $('article').hide();
     $('#aboutMe').hide();
     $('article').fadeIn();
-  };
+};
 
   module.articleController = articleController;
 })(app);
