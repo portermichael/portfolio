@@ -18,6 +18,10 @@ h1 {
   font-weight: bold;
 }
 
+header h1, h2,header h3{
+  padding: 1em 0 0 15%;
+  border-bottom: none;
+}
 
 h2 {
   font-size: 1.999em;
